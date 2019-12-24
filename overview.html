@@ -1,18 +1,150 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>概略 | w2ui.toolbar - にほんご。</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:title" content="概略 | w2ui.toolbar - にほんご。"><meta property="og:url"><meta property="og:type" content="article"><link rel="icon" href="https://tr.you84815.space/w2ui_toolbar/favicon.ico"><link rel="stylesheet" href="./css/main.css"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-106478577-1', 'auto');</script></head><body><div id="container"><header><div class="icon"><a class="no-barba" href="https://tr.you84815.space/"><svg width="16" height="16"><rect width="16" height="16" fill="#e0e0e0"></rect></svg></a></div><div class="navi_toggle" onclick="toggleMenu()"><svg id="menu_close" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><svg id="menu_open" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div><div class="title">w2ui.toolbar - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div></header><div class="navi" id="navi"><ul class="menu"><li><a class="index" href="./index.html">Home</a></li><li><a class="overview active" href="./overview.html">Overview</a></li><li><span onclick="toggleNaviSubMenu('navi_events')">Events</span><ul class="hidden" id="navi_events"><li>Events<ul><li><a href="./events/onClick.html">onClick</a></li></ul></li><li>CommonEvents<ul><li><a class="no-barba" href="./../w2ui_utils/events/onDestroy.html">onDestroy</a></li><li><a class="no-barba" href="./../w2ui_utils/events/onRefresh.html">onRefresh</a></li><li><a class="no-barba" href="./../w2ui_utils/events/onRender.html">onRender</a></li><li><a class="no-barba" href="./../w2ui_utils/events/onResize.html">onResize</a></li></ul></li></ul></li><li><span onclick="toggleNaviSubMenu('navi_properties')">Properties</span><ul class="hidden" id="navi_properties"><li>Properties<ul><li><a href="./properties/items.html">items</a></li><li><a href="./properties/right.html">right</a></li><li><a href="./properties/routeData.html">routeData</a></li><li><a href="./properties/tooltip.html">tooltip</a></li></ul></li><li>CommonProperties<ul><li><a class="no-barba" href="./../w2ui_utils/properties/box.html">box</a></li><li><a class="no-barba" href="./../w2ui_utils/properties/handlers.html">handlers</a></li><li><a class="no-barba" href="./../w2ui_utils/properties/name.html">name</a></li><li><a class="no-barba" href="./../w2ui_utils/properties/style.html">style</a></li></ul></li></ul></li><li><span onclick="toggleNaviSubMenu('navi_methods')">Methods</span><ul class="hidden" id="navi_methods"><li>Methods<ul><li><a href="./methods/add.html">add</a></li><li><a href="./methods/check.html">check</a></li><li><a href="./methods/click.html">click</a></li><li><a href="./methods/colorClick.html">colorClick</a></li><li><a href="./methods/disable.html">disable</a></li><li><a href="./methods/enable.html">enable</a></li><li><a href="./methods/get.html">get</a></li><li><a href="./methods/getItemHTML.html">getItemHTML</a></li><li><a href="./methods/hide.html">hide</a></li><li><a href="./methods/insert.html">insert</a></li><li><a href="./methods/menuClick.html">menuClick</a></li><li><a href="./methods/remove.html">remove</a></li><li><a href="./methods/scroll.html">scroll</a></li><li><a href="./methods/set.html">set</a></li><li><a href="./methods/show.html">show</a></li><li><a href="./methods/tooltipHide.html">tooltipHide</a></li><li><a href="./methods/tooltipShow.html">tooltipShow</a></li><li><a href="./methods/uncheck.html">uncheck</a></li></ul></li><li>CommonMethods<ul><li><a class="no-barba" href="./../w2ui_utils/methods/destroy.html">destroy</a></li><li><a class="no-barba" href="./../w2ui_utils/methods/off.html">off</a></li><li><a class="no-barba" href="./../w2ui_utils/methods/on.html">on</a></li><li><a class="no-barba" href="./../w2ui_utils/methods/refresh.html">refresh</a></li><li><a class="no-barba" href="./../w2ui_utils/methods/render.html">render</a></li><li><a class="no-barba" href="./../w2ui_utils/methods/resize.html">resize</a></li><li><a class="no-barba" href="./../w2ui_utils/methods/trigger.html">trigger</a></li></ul></li></ul></li></ul></div><div id="content"><div id="main"><div id="barba-wrapper"><div class="barba-container"><h1>概略</h1><div id="update_date"><span>更新日: 2018.09.07
-</span></div><p>w2toolbarを使うと、さまざまなボタンや、ドロップダウンストを作成することができます。
-このツールバーオブジェクトは、ツールバーグリッド内で使用されます。
-ツールバーには、ボタン、ラジオボタン、
-チェックボタン、メニュー、ドロップダウンリストをHTMLで定義することができます。</p><h3>デモ</h3><p>toolbarの簡単な使い方は以下の通りです。必要最低限のHTML、JavaScriptで表示しています。</p><h5>HTML</h5><pre><code><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>概略 | w2ui.toolbar - にほんご。</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="概略 | w2ui.toolbar - にほんご。">
+    <meta property="og:url">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="https://tr.you84815.space/w2ui_toolbar/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link id="theme_style" rel="stylesheet" type="text/css" href="">
+    <script id="srcTheme" src="./js/toggleTheme.js" data-dir="w2ui_toolbar"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-106478577-1', 'auto');
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <div class="icon"><a class="no-barba" href="https://tr.you84815.space/">
+            <svg width="16" height="16">
+              <rect width="16" height="16" fill="#e0e0e0"></rect>
+            </svg></a></div>
+        <div class="navi_toggle" onclick="toggleMenu()">
+          <svg id="menu_close" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg>
+          <svg id="menu_open" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>
+        </div>
+        <div class="title">w2ui.toolbar - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div><span id="toggleTheme">
+          <svg role="img" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+          </svg></span>
+      </header>
+      <div class="navi" id="navi">
+        <ul class="menu">
+          <li><a class="index" href="./index.html">Home</a></li>
+          <li><a class="overview active" href="./overview.html">Overview</a></li>
+          <li><span onclick="toggleNaviSubMenu('navi_events')">Events</span>
+            <ul class="hidden" id="navi_events">
+              <li>Events
+                <ul>
+                  <li><a href="./events/onClick.html">onClick</a></li>
+                </ul>
+              </li>
+              <li>CommonEvents
+                <ul>
+                  <li><a class="no-barba" href="./../w2ui_utils/events/onDestroy.html">onDestroy</a></li>
+                  <li><a class="no-barba" href="./../w2ui_utils/events/onRefresh.html">onRefresh</a></li>
+                  <li><a class="no-barba" href="./../w2ui_utils/events/onRender.html">onRender</a></li>
+                  <li><a class="no-barba" href="./../w2ui_utils/events/onResize.html">onResize</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span onclick="toggleNaviSubMenu('navi_properties')">Properties</span>
+            <ul class="hidden" id="navi_properties">
+              <li>Properties
+                <ul>
+                  <li><a href="./properties/items.html">items</a></li>
+                  <li><a href="./properties/right.html">right</a></li>
+                  <li><a href="./properties/routeData.html">routeData</a></li>
+                  <li><a href="./properties/tooltip.html">tooltip</a></li>
+                </ul>
+              </li>
+              <li>CommonProperties
+                <ul>
+                  <li><a class="no-barba" href="./../w2ui_utils/properties/box.html">box</a></li>
+                  <li><a class="no-barba" href="./../w2ui_utils/properties/handlers.html">handlers</a></li>
+                  <li><a class="no-barba" href="./../w2ui_utils/properties/name.html">name</a></li>
+                  <li><a class="no-barba" href="./../w2ui_utils/properties/style.html">style</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span onclick="toggleNaviSubMenu('navi_methods')">Methods</span>
+            <ul class="hidden" id="navi_methods">
+              <li>Methods
+                <ul>
+                  <li><a href="./methods/add.html">add</a></li>
+                  <li><a href="./methods/check.html">check</a></li>
+                  <li><a href="./methods/click.html">click</a></li>
+                  <li><a href="./methods/colorClick.html">colorClick</a></li>
+                  <li><a href="./methods/disable.html">disable</a></li>
+                  <li><a href="./methods/enable.html">enable</a></li>
+                  <li><a href="./methods/get.html">get</a></li>
+                  <li><a href="./methods/getItemHTML.html">getItemHTML</a></li>
+                  <li><a href="./methods/hide.html">hide</a></li>
+                  <li><a href="./methods/insert.html">insert</a></li>
+                  <li><a href="./methods/menuClick.html">menuClick</a></li>
+                  <li><a href="./methods/remove.html">remove</a></li>
+                  <li><a href="./methods/scroll.html">scroll</a></li>
+                  <li><a href="./methods/set.html">set</a></li>
+                  <li><a href="./methods/show.html">show</a></li>
+                  <li><a href="./methods/tooltipHide.html">tooltipHide</a></li>
+                  <li><a href="./methods/tooltipShow.html">tooltipShow</a></li>
+                  <li><a href="./methods/uncheck.html">uncheck</a></li>
+                </ul>
+              </li>
+              <li>CommonMethods
+                <ul>
+                  <li><a class="no-barba" href="./../w2ui_utils/methods/destroy.html">destroy</a></li>
+                  <li><a class="no-barba" href="./../w2ui_utils/methods/off.html">off</a></li>
+                  <li><a class="no-barba" href="./../w2ui_utils/methods/on.html">on</a></li>
+                  <li><a class="no-barba" href="./../w2ui_utils/methods/refresh.html">refresh</a></li>
+                  <li><a class="no-barba" href="./../w2ui_utils/methods/render.html">render</a></li>
+                  <li><a class="no-barba" href="./../w2ui_utils/methods/resize.html">resize</a></li>
+                  <li><a class="no-barba" href="./../w2ui_utils/methods/trigger.html">trigger</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="main">
+          <div id="barba-wrapper">
+            <div class="barba-container">
+              <h1>概略</h1>
+              <div id="update_date"><span>更新日: 2018.09.07
+</span>
+              </div>
+              <p>
+                w2toolbarを使うと、さまざまなボタンや、ドロップダウンストを作成することができます。
+                このツールバーオブジェクトは、ツールバーグリッド内で使用されます。
+                ツールバーには、ボタン、ラジオボタン、
+                チェックボタン、メニュー、ドロップダウンリストをHTMLで定義することができます。
+              </p>
+              <h3>デモ</h3>
+              <p>toolbarの簡単な使い方は以下の通りです。必要最低限のHTML、JavaScriptで表示しています。</p>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://w2ui.com/src/w2ui-1.4.min.css"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://w2ui.com/src/w2ui-1.4.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://w2ui.com/src/w2ui-1.4.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"myToolbar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -40,6 +172,29 @@ $(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span 
     });
 });
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre><br><div class="license"><p>&copy; <span id="w2ui_cry">2017</span>. <img src="./img/email.png">.<br> Code licensed under the<a href="https://en.wikipedia.org/wiki/MIT_License">MIT License</a>. Documentation licensed under<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p><p>このコンテンツはvitmalinaによる<a href="http://w2ui.com/web/docs/1.5/">w2ui.toolbarドキュメント</a>を翻訳/改変したものです。</p><style>.license img {
-  vertical-align: middle;
-}</style><script>document.getElementById('w2ui_cry').innerHTML = new Date().getFullYear();</script></div></div></div></div></div><footer><span> &copy; <span id="copy_year">2017</span> tobijibu</span></footer></div><noscript id="deferred-styles"><link href="./css/lazy.css" rel="stylesheet"></noscript><script src="./js/main.js" defer></script><script src="./js/jquery-2.2.4.min.js"></script><script src="./js/w2ui-1.5.rc1.min.js"></script><div id="src" hidden></div></body></html>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre><br>
+              <div class="license">
+                <p>&copy; <span id="w2ui_cry">2017</span>. <img src="./img/email.png">.<br> Code licensed under the<a href="https://en.wikipedia.org/wiki/MIT_License">MIT License</a>. Documentation licensed under<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+                <p>このコンテンツはvitmalinaによる<a href="http://w2ui.com/web/docs/1.5/">w2ui.toolbarドキュメント</a>を翻訳/改変したものです。</p>
+                <style>
+                  .license img {
+                    vertical-align: middle;
+                  }
+                </style>
+                <script>document.getElementById('w2ui_cry').innerHTML = new Date().getFullYear();</script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer><span>&copy; <span id="copy_year">2017</span> tobijibu</span></footer>
+    </div>
+    <noscript id="deferred-styles">
+      <link href="./css/lazy.css" rel="stylesheet">
+    </noscript>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/w2ui-1.5.rc1.min.js"></script>
+    <div id="src" hidden></div>
+  </body>
+</html>

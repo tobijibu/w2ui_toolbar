@@ -1,11 +1,142 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>w2toolbar.items | w2ui.toolbar - にほんご。</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:title" content="w2toolbar.items | w2ui.toolbar - にほんご。"><meta property="og:url"><meta property="og:type" content="article"><link rel="icon" href="https://tr.you84815.space/w2ui_toolbar/favicon.ico"><link rel="stylesheet" href="../css/main.css"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-106478577-1', 'auto');</script></head><body><div id="container"><header><div class="icon"><a class="no-barba" href="https://tr.you84815.space/"><svg width="16" height="16"><rect width="16" height="16" fill="#e0e0e0"></rect></svg></a></div><div class="navi_toggle" onclick="toggleMenu()"><svg id="menu_close" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><svg id="menu_open" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div><div class="title">w2ui.toolbar - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div></header><div class="navi" id="navi"><ul class="menu"><li><a class="index" href="../index.html">Home</a></li><li><a class="overview" href="../overview.html">Overview</a></li><li><span onclick="toggleNaviSubMenu('navi_events')">Events</span><ul class="hidden" id="navi_events"><li>Events<ul><li><a href="../events/onClick.html">onClick</a></li></ul></li><li>CommonEvents<ul><li><a class="no-barba" href="../../w2ui_utils/events/onDestroy.html">onDestroy</a></li><li><a class="no-barba" href="../../w2ui_utils/events/onRefresh.html">onRefresh</a></li><li><a class="no-barba" href="../../w2ui_utils/events/onRender.html">onRender</a></li><li><a class="no-barba" href="../../w2ui_utils/events/onResize.html">onResize</a></li></ul></li></ul></li><li><span onclick="toggleNaviSubMenu('navi_properties')">Properties</span><ul id="navi_properties"><li>Properties<ul><li><a class="active" href="../properties/items.html">items</a></li><li><a href="../properties/right.html">right</a></li><li><a href="../properties/routeData.html">routeData</a></li><li><a href="../properties/tooltip.html">tooltip</a></li></ul></li><li>CommonProperties<ul><li><a class="no-barba" href="../../w2ui_utils/properties/box.html">box</a></li><li><a class="no-barba" href="../../w2ui_utils/properties/handlers.html">handlers</a></li><li><a class="no-barba" href="../../w2ui_utils/properties/name.html">name</a></li><li><a class="no-barba" href="../../w2ui_utils/properties/style.html">style</a></li></ul></li></ul></li><li><span onclick="toggleNaviSubMenu('navi_methods')">Methods</span><ul class="hidden" id="navi_methods"><li>Methods<ul><li><a href="../methods/add.html">add</a></li><li><a href="../methods/check.html">check</a></li><li><a href="../methods/click.html">click</a></li><li><a href="../methods/colorClick.html">colorClick</a></li><li><a href="../methods/disable.html">disable</a></li><li><a href="../methods/enable.html">enable</a></li><li><a href="../methods/get.html">get</a></li><li><a href="../methods/getItemHTML.html">getItemHTML</a></li><li><a href="../methods/hide.html">hide</a></li><li><a href="../methods/insert.html">insert</a></li><li><a href="../methods/menuClick.html">menuClick</a></li><li><a href="../methods/remove.html">remove</a></li><li><a href="../methods/scroll.html">scroll</a></li><li><a href="../methods/set.html">set</a></li><li><a href="../methods/show.html">show</a></li><li><a href="../methods/tooltipHide.html">tooltipHide</a></li><li><a href="../methods/tooltipShow.html">tooltipShow</a></li><li><a href="../methods/uncheck.html">uncheck</a></li></ul></li><li>CommonMethods<ul><li><a class="no-barba" href="../../w2ui_utils/methods/destroy.html">destroy</a></li><li><a class="no-barba" href="../../w2ui_utils/methods/off.html">off</a></li><li><a class="no-barba" href="../../w2ui_utils/methods/on.html">on</a></li><li><a class="no-barba" href="../../w2ui_utils/methods/refresh.html">refresh</a></li><li><a class="no-barba" href="../../w2ui_utils/methods/render.html">render</a></li><li><a class="no-barba" href="../../w2ui_utils/methods/resize.html">resize</a></li><li><a class="no-barba" href="../../w2ui_utils/methods/trigger.html">trigger</a></li></ul></li></ul></li></ul></div><div id="content"><div id="main"><div id="barba-wrapper"><div class="barba-container"><h1>w2toolbar.items</h1><div id="update_date"><span>更新日: 2018.09.07
-</span></div><p>アイテムオブジェクトの配列です。</p><pre><code><span class="hljs-built_in">Array</span>, <span class="hljs-keyword">default</span> = []</code></pre><br><p>ツールバーの全ての要素(ボタン、ドロップダウンリスト等)を定義します。
-オブジェクト作成時またはランタイム時に定義することができます。</p><pre><code>$(<span class="hljs-string">'#toolbar'</span>).w2toolbar({
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>w2toolbar.items | w2ui.toolbar - にほんご。</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="w2toolbar.items | w2ui.toolbar - にほんご。">
+    <meta property="og:url">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="https://tr.you84815.space/w2ui_toolbar/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link id="theme_style" rel="stylesheet" type="text/css" href="">
+    <script id="srcTheme" src="../js/toggleTheme.js" data-dir="w2ui_toolbar"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-106478577-1', 'auto');
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <div class="icon"><a class="no-barba" href="https://tr.you84815.space/">
+            <svg width="16" height="16">
+              <rect width="16" height="16" fill="#e0e0e0"></rect>
+            </svg></a></div>
+        <div class="navi_toggle" onclick="toggleMenu()">
+          <svg id="menu_close" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg>
+          <svg id="menu_open" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>
+        </div>
+        <div class="title">w2ui.toolbar - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div><span id="toggleTheme">
+          <svg role="img" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+          </svg></span>
+      </header>
+      <div class="navi" id="navi">
+        <ul class="menu">
+          <li><a class="index" href="../index.html">Home</a></li>
+          <li><a class="overview" href="../overview.html">Overview</a></li>
+          <li><span onclick="toggleNaviSubMenu('navi_events')">Events</span>
+            <ul class="hidden" id="navi_events">
+              <li>Events
+                <ul>
+                  <li><a href="../events/onClick.html">onClick</a></li>
+                </ul>
+              </li>
+              <li>CommonEvents
+                <ul>
+                  <li><a class="no-barba" href="../../w2ui_utils/events/onDestroy.html">onDestroy</a></li>
+                  <li><a class="no-barba" href="../../w2ui_utils/events/onRefresh.html">onRefresh</a></li>
+                  <li><a class="no-barba" href="../../w2ui_utils/events/onRender.html">onRender</a></li>
+                  <li><a class="no-barba" href="../../w2ui_utils/events/onResize.html">onResize</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span onclick="toggleNaviSubMenu('navi_properties')">Properties</span>
+            <ul id="navi_properties">
+              <li>Properties
+                <ul>
+                  <li><a class="active" href="../properties/items.html">items</a></li>
+                  <li><a href="../properties/right.html">right</a></li>
+                  <li><a href="../properties/routeData.html">routeData</a></li>
+                  <li><a href="../properties/tooltip.html">tooltip</a></li>
+                </ul>
+              </li>
+              <li>CommonProperties
+                <ul>
+                  <li><a class="no-barba" href="../../w2ui_utils/properties/box.html">box</a></li>
+                  <li><a class="no-barba" href="../../w2ui_utils/properties/handlers.html">handlers</a></li>
+                  <li><a class="no-barba" href="../../w2ui_utils/properties/name.html">name</a></li>
+                  <li><a class="no-barba" href="../../w2ui_utils/properties/style.html">style</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span onclick="toggleNaviSubMenu('navi_methods')">Methods</span>
+            <ul class="hidden" id="navi_methods">
+              <li>Methods
+                <ul>
+                  <li><a href="../methods/add.html">add</a></li>
+                  <li><a href="../methods/check.html">check</a></li>
+                  <li><a href="../methods/click.html">click</a></li>
+                  <li><a href="../methods/colorClick.html">colorClick</a></li>
+                  <li><a href="../methods/disable.html">disable</a></li>
+                  <li><a href="../methods/enable.html">enable</a></li>
+                  <li><a href="../methods/get.html">get</a></li>
+                  <li><a href="../methods/getItemHTML.html">getItemHTML</a></li>
+                  <li><a href="../methods/hide.html">hide</a></li>
+                  <li><a href="../methods/insert.html">insert</a></li>
+                  <li><a href="../methods/menuClick.html">menuClick</a></li>
+                  <li><a href="../methods/remove.html">remove</a></li>
+                  <li><a href="../methods/scroll.html">scroll</a></li>
+                  <li><a href="../methods/set.html">set</a></li>
+                  <li><a href="../methods/show.html">show</a></li>
+                  <li><a href="../methods/tooltipHide.html">tooltipHide</a></li>
+                  <li><a href="../methods/tooltipShow.html">tooltipShow</a></li>
+                  <li><a href="../methods/uncheck.html">uncheck</a></li>
+                </ul>
+              </li>
+              <li>CommonMethods
+                <ul>
+                  <li><a class="no-barba" href="../../w2ui_utils/methods/destroy.html">destroy</a></li>
+                  <li><a class="no-barba" href="../../w2ui_utils/methods/off.html">off</a></li>
+                  <li><a class="no-barba" href="../../w2ui_utils/methods/on.html">on</a></li>
+                  <li><a class="no-barba" href="../../w2ui_utils/methods/refresh.html">refresh</a></li>
+                  <li><a class="no-barba" href="../../w2ui_utils/methods/render.html">render</a></li>
+                  <li><a class="no-barba" href="../../w2ui_utils/methods/resize.html">resize</a></li>
+                  <li><a class="no-barba" href="../../w2ui_utils/methods/trigger.html">trigger</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="main">
+          <div id="barba-wrapper">
+            <div class="barba-container">
+              <h1>w2toolbar.items</h1>
+              <div id="update_date"><span>更新日: 2018.09.07
+</span>
+              </div>
+              <p>アイテムオブジェクトの配列です。</p>
+              <pre><code><span class="hljs-built_in">Array</span>, <span class="hljs-keyword">default</span> = []</code></pre><br>
+              <p>
+                ツールバーの全ての要素(ボタン、ドロップダウンリスト等)を定義します。
+                オブジェクト作成時またはランタイム時に定義することができます。
+              </p>
+              <pre><code>$(<span class="hljs-string">'#toolbar'</span>).w2toolbar({
     <span class="hljs-attr">name</span>  : <span class="hljs-string">'toolbar'</span>,
     <span class="hljs-attr">right</span> : <span class="hljs-string">'text on the right'</span>,
     <span class="hljs-attr">items</span> : [
@@ -13,39 +144,71 @@ ga('create', 'UA-106478577-1', 'auto');</script></head><body><div id="container"
         { <span class="hljs-attr">type</span>: <span class="hljs-string">'radio'</span>,  <span class="hljs-attr">id</span>: <span class="hljs-string">'item3'</span>,  <span class="hljs-attr">group</span>: <span class="hljs-string">'1'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Radio 1'</span>, <span class="hljs-attr">img</span>: <span class="hljs-string">'icon-add'</span> },
         { <span class="hljs-attr">type</span>: <span class="hljs-string">'radio'</span>,  <span class="hljs-attr">id</span>: <span class="hljs-string">'item4'</span>,  <span class="hljs-attr">group</span>: <span class="hljs-string">'1'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Radio 2'</span>, <span class="hljs-attr">img</span>: <span class="hljs-string">'icon-add'</span> }
     ]
-});</code></pre><br><p>ランタイム時に<code>.items</code>プロパティを変更した場合、<a class="no-barba" href="../../w2ui_utils/methods/refresh.html"><code>w2utils.refresh()</code></a>メソッドを使ってツールバーを更新する必要があります。
-ランタイム時にアイテムを追加/削除したい場合、<a href="../methods/add.html"><code>.add()</code></a>、<a href="../methods/add.html"><code>.insert()</code></a>、<a href="../methods/add.html"><code>.remove()</code></a>メソッドを利用することができます。</p><p>アイテムオブジェクトの構造は以下のとおりです。</p><pre><code>item: {
+});</code></pre><br>
+              <p>ランタイム時に<code>.items</code>プロパティを変更した場合、<a class="no-barba" href="../../w2ui_utils/methods/refresh.html"><code>w2utils.refresh()</code></a>メソッドを使ってツールバーを更新する必要があります。
+                ランタイム時にアイテムを追加/削除したい場合、<a href="../methods/add.html"><code>.add()</code></a>、<a href="../methods/add.html"><code>.insert()</code></a>、<a href="../methods/add.html"><code>.remove()</code></a>メソッドを利用することができます。
+              </p>
+              <p>アイテムオブジェクトの構造は以下のとおりです。</p>
+              <pre><code>item: {
     <span class="hljs-attr">id</span>       : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// アイテムのid</span>
-    type     : <span class="hljs-string">'button'</span>,<span class="hljs-comment">// アイテムのタイプ。(button, check, radio, drop, menu, break, spacer, html)</span>
-    text     : <span class="hljs-string">''</span>,      <span class="hljs-comment">// アイテムの説明。文字列または関数を指定することができます。</span>
-    html     : <span class="hljs-string">''</span>,      <span class="hljs-comment">// アイテムのhtmlテキスト。typeがhtmlの場合のみ。文字列または関数を指定することができます。</span>
-    tooltip  : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// アイテムのツールチップ。文字列または関数を指定することができます。詳細は.tooltipプロパティを参照してください。</span>
-    count    : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// カウントバッジ。</span>
-    hidden   : <span class="hljs-literal">false</span>,   <span class="hljs-comment">// アイテムを非表示にするかどうかを指定します。</span>
-    disabled : <span class="hljs-literal">false</span>,   <span class="hljs-comment">// アイテムを無効化するかどうかを指定します。</span>
-    checked  : <span class="hljs-literal">false</span>,   <span class="hljs-comment">// アイテムをチェックするかどうかを指定します。</span>
-    img      : <span class="hljs-string">''</span>,      <span class="hljs-comment">// アイテムに指定する画像のCSSクラスを指定します。</span>
-    icon     : <span class="hljs-string">''</span>,      <span class="hljs-comment">// アイテムに指定するアイコンフォントのCSSクラスを指定します。</span>
-    route    : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// ルートを指定。/item/:id/detailsといった動的な要素を指定することができます。詳細は.routeDataプロパティを参照してください。</span>
-    arrow    : <span class="hljs-literal">true</span>,    <span class="hljs-comment">// 下矢印。typeがdropまたは、menuの場合のみ。</span>
-    style    : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// キャプションの外部CSS。</span>
-    color    : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// 色。カラーピッカーで使用します。</span>
-    transparent: <span class="hljs-literal">null</span>,  <span class="hljs-comment">// 透明度のフラグ。t/f(=透明/不透明)。カラーピッカーで使用します。</span>
-    group    : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// アイテムのグループ名。ラジオボタンで使用します。数値または文字列を指定することができます。</span>
-    items    : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// メニューのアイテム配列。typeがmenuの場合のみ。</span>
-    selected : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// menu-checkとmenu-radioの選択された"アイテムのidの配列"のid。</span>
-    overlay  : {},      <span class="hljs-comment">// オーバーレイするための追加パラメータ。ドロップダウンリストで指定することができます。詳細は.overlayプロパティを参照してください。</span>
-    onClick  : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// このアイテムをクリックした時に発生するイベントハンドラです。</span>
-    onRefresh: <span class="hljs-literal">null</span>     <span class="hljs-comment">// このアイテムを更新した時に発生するイベントハンドラです。</span>
-}</code></pre><br><p>ツールバーには12種類のアイテムタイプがあります。</p><div class="table-box"><table class="my-table"><tr><th>type</th><th>詳細</th></tr><tr><td><code>button</code></td><td>通常のボタンです。</td></tr><tr><td><code>check</code></td><td>チェックボタンです。(チェックされているか、されていないかの2つの状態を持ちます。)
-詳細は<code>.checked</code>プロパティを参照してください。</td></tr><tr><td><code>radio</code></td><td>ラジオボタンです。
-チェックボタンと似ていますが、
-同じグループ内の別のラジオボタンを選択すると選択状態が解除されます。
-詳細は<code>.checked</code>プロパティと、<code>.group</code>プロパティを参照してください。</td></tr><tr><td><code>menu</code></td><td>ドロップダウンストです。
-<code>.item</code>プロパティがメニュー項目として扱われます。
-このプロパティには文字列の配列または、オブジェクトの配列のどちらかを指定します。
-文字列の配列を指定した場合、配列の各要素はメニュー項目になります。
-オブジェクトの配列を指定した場合、配列の各要素は以下の構造を持ったオブジェクトになります。<pre><code>| item: {
+    <span class="hljs-attr">type</span>     : <span class="hljs-string">'button'</span>,<span class="hljs-comment">// アイテムのタイプ。(button, check, radio, drop, menu, break, spacer, html)</span>
+    <span class="hljs-attr">text</span>     : <span class="hljs-string">''</span>,      <span class="hljs-comment">// アイテムの説明。文字列または関数を指定することができます。</span>
+    <span class="hljs-attr">html</span>     : <span class="hljs-string">''</span>,      <span class="hljs-comment">// アイテムのhtmlテキスト。typeがhtmlの場合のみ。文字列または関数を指定することができます。</span>
+    <span class="hljs-attr">tooltip</span>  : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// アイテムのツールチップ。文字列または関数を指定することができます。詳細は.tooltipプロパティを参照してください。</span>
+    <span class="hljs-attr">count</span>    : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// カウントバッジ。</span>
+    <span class="hljs-attr">hidden</span>   : <span class="hljs-literal">false</span>,   <span class="hljs-comment">// アイテムを非表示にするかどうかを指定します。</span>
+    <span class="hljs-attr">disabled</span> : <span class="hljs-literal">false</span>,   <span class="hljs-comment">// アイテムを無効化するかどうかを指定します。</span>
+    <span class="hljs-attr">checked</span>  : <span class="hljs-literal">false</span>,   <span class="hljs-comment">// アイテムをチェックするかどうかを指定します。</span>
+    <span class="hljs-attr">img</span>      : <span class="hljs-string">''</span>,      <span class="hljs-comment">// アイテムに指定する画像のCSSクラスを指定します。</span>
+    <span class="hljs-attr">icon</span>     : <span class="hljs-string">''</span>,      <span class="hljs-comment">// アイテムに指定するアイコンフォントのCSSクラスを指定します。</span>
+    <span class="hljs-attr">route</span>    : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// ルートを指定。/item/:id/detailsといった動的な要素を指定することができます。詳細は.routeDataプロパティを参照してください。</span>
+    <span class="hljs-attr">arrow</span>    : <span class="hljs-literal">true</span>,    <span class="hljs-comment">// 下矢印。typeがdropまたは、menuの場合のみ。</span>
+    <span class="hljs-attr">style</span>    : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// キャプションの外部CSS。</span>
+    <span class="hljs-attr">color</span>    : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// 色。カラーピッカーで使用します。</span>
+    <span class="hljs-attr">transparent</span>: <span class="hljs-literal">null</span>,  <span class="hljs-comment">// 透明度のフラグ。t/f(=透明/不透明)。カラーピッカーで使用します。</span>
+    <span class="hljs-attr">group</span>    : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// アイテムのグループ名。ラジオボタンで使用します。数値または文字列を指定することができます。</span>
+    <span class="hljs-attr">items</span>    : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// メニューのアイテム配列。typeがmenuの場合のみ。</span>
+    <span class="hljs-attr">selected</span> : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// menu-checkとmenu-radioの選択された"アイテムのidの配列"のid。</span>
+    <span class="hljs-attr">overlay</span>  : {},      <span class="hljs-comment">// オーバーレイするための追加パラメータ。ドロップダウンリストで指定することができます。詳細は.overlayプロパティを参照してください。</span>
+    <span class="hljs-attr">onClick</span>  : <span class="hljs-literal">null</span>,    <span class="hljs-comment">// このアイテムをクリックした時に発生するイベントハンドラです。</span>
+    <span class="hljs-attr">onRefresh</span>: <span class="hljs-literal">null</span>     <span class="hljs-comment">// このアイテムを更新した時に発生するイベントハンドラです。</span>
+}</code></pre><br>
+              <p>ツールバーには12種類のアイテムタイプがあります。</p>
+              <div class="table-box">
+                <table class="my-table">
+                  <tr>
+                    <th>type</th>
+                    <th>詳細</th>
+                  </tr>
+                  <tr>
+                    <td><code>button</code></td>
+                    <td>通常のボタンです。</td>
+                  </tr>
+                  <tr>
+                    <td><code>check</code></td>
+                    <td>
+                      チェックボタンです。(チェックされているか、されていないかの2つの状態を持ちます。)
+                      詳細は<code>.checked</code>プロパティを参照してください。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>radio</code></td>
+                    <td>
+                      ラジオボタンです。
+                      チェックボタンと似ていますが、
+                      同じグループ内の別のラジオボタンを選択すると選択状態が解除されます。
+                      詳細は<code>.checked</code>プロパティと、<code>.group</code>プロパティを参照してください。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>menu</code></td>
+                    <td>
+                      ドロップダウンストです。
+                      <code>.item</code>プロパティがメニュー項目として扱われます。
+                      このプロパティには文字列の配列または、オブジェクトの配列のどちらかを指定します。
+                      文字列の配列を指定した場合、配列の各要素はメニュー項目になります。
+                      オブジェクトの配列を指定した場合、配列の各要素は以下の構造を持ったオブジェクトになります。
+                      <pre><code>| item: {
 |     id       : <span class="hljs-string">''</span>,     <span class="hljs-comment">// メニュー項目のid。</span>
 |     text     : <span class="hljs-string">''</span>,     <span class="hljs-comment">// メニュー項目のテキスト。</span>
 |     icon     : <span class="hljs-string">''</span>,     <span class="hljs-comment">// アイコンフォントのCSSクラス。</span>
@@ -54,24 +217,81 @@ ga('create', 'UA-106478577-1', 'auto');</script></head><body><div id="container"
 |     checked  : <span class="hljs-literal">false</span>   <span class="hljs-comment">// アイテムをチェックするかどうかを指定します。</span>
 |                        <span class="hljs-comment">// menu-checkとmenu-radioの場合のみ。</span>
 | }</code></pre><br>w2ui.cssファイルには、いくつかのデフォルトアイコンがあります。
-アイコンを使ったり、アイコンを含めた独自のCSSを作ることができます。
-ほとんどのデフォルトアイコンは<a class="no-barba" href="../../w2ui_grid">w2grid</a>で使われています。<br><b>デフォルトアイコン</b><sup>*1</sup>：
-<code>icon-folder</code>、<code>icon-page</code>、<code>icon-reload</code>、
-<code>icon-columns</code>、<code>icon-search</code>、<code>icon-add</code>、
-<code>icon-delete</code>、<code>icon-save</code>、<code>, icon-edit</code>、
-<code>icon-bullet-black</code><blockquote>*1 2018/06/21現在、<code>icon-folder</code>、<code>icon-page</code>、 <code>icon-search</code>だけが表示されます。
-他のアイコンは表示されません。</blockquote></td></tr><tr><td class="nowrap"><code>menu-check</code></td><td>チェックボタンのドロップダウンリストです。
-メニュー項目に似ていますが、メニュー項目の左にチェックボタンが表示されます。
-<code>.selected</code>プロパティ(アイテムがメニュー項目でない場合)を使って、選択されたチェックボタンを取得することができます。
-<code>menu-check</code>の場合、選択されたアイテムのidの配列です。</td></tr><tr><td class="nowrap"><code>menu-radio</code></td><td>ラジオボタンのドロップダウンストです。
-メニュー項目に似ていますが、メニュー項目の左にラジオボタンが表示されます。
-<code>.selected</code>プロパティ(アイテムがメニュー項目でない場合)を使って、選択されたラジオボタンを取得することができます。
-<code>menu-radio</code>の場合、選択されたアイテムの単一のidです。</td></tr><tr><td><code>drop</code></td><td>シンプルなドロップボックスです。
-<code>.html</code>プロパティで指定された内容を表示します。</td></tr><tr><td><code>html</code></td><td>HTMLアイテムです。
-ツールバーのアイテムの代わりに指定したHTMLが表示されます。</td></tr><tr><td><code>color</code></td><td>カラーピッカーのドロップダウンリストです。
-<code>.color</code>プロパティと、<code>.transparent</code>プロパティを参照してください。</td></tr><tr><td class="nowrap"><code>text-color</code></td><td>テキストのカラーピッカードロップダウンリストです。テキストが選択した色になります。
-<code>.color</code>プロパティと、<code>.transparent</code>プロパティを参照してください。</td></tr><tr><td><code>break</code></td><td>縦線です。</td></tr><tr><td><code>spacer</code></td><td>水平スペーサーです。
-以降の全てのボタンを右寄せにします。</td></tr></table></div><br><h2>デモ</h2><p>ツールバーの各種アイテムを表示します。</p><div id="toolbar"></div><h5>JavaScript</h5><pre><code>$(<span class="hljs-string">'#toolbar'</span>).w2toolbar({
+                      アイコンを使ったり、アイコンを含めた独自のCSSを作ることができます。
+                      ほとんどのデフォルトアイコンは<a class="no-barba" href="../../w2ui_grid">w2grid</a>で使われています。<br><b>デフォルトアイコン</b><sup>*1</sup>：
+                      <code>icon-folder</code>、<code>icon-page</code>、<code>icon-reload</code>、
+                      <code>icon-columns</code>、<code>icon-search</code>、<code>icon-add</code>、
+                      <code>icon-delete</code>、<code>icon-save</code>、<code>, icon-edit</code>、
+                      <code>icon-bullet-black</code>
+                      <blockquote>*1 2018/06/21現在、<code>icon-folder</code>、<code>icon-page</code>、 <code>icon-search</code>だけが表示されます。
+                        他のアイコンは表示されません。
+                      </blockquote>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap"><code>menu-check</code></td>
+                    <td>
+                      チェックボタンのドロップダウンリストです。
+                      メニュー項目に似ていますが、メニュー項目の左にチェックボタンが表示されます。
+                      <code>.selected</code>プロパティ(アイテムがメニュー項目でない場合)を使って、選択されたチェックボタンを取得することができます。
+                      <code>menu-check</code>の場合、選択されたアイテムのidの配列です。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap"><code>menu-radio</code></td>
+                    <td>
+                      ラジオボタンのドロップダウンストです。
+                      メニュー項目に似ていますが、メニュー項目の左にラジオボタンが表示されます。
+                      <code>.selected</code>プロパティ(アイテムがメニュー項目でない場合)を使って、選択されたラジオボタンを取得することができます。
+                      <code>menu-radio</code>の場合、選択されたアイテムの単一のidです。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>drop</code></td>
+                    <td>
+                      シンプルなドロップボックスです。
+                      <code>.html</code>プロパティで指定された内容を表示します。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>html</code></td>
+                    <td>
+                      HTMLアイテムです。
+                      ツールバーのアイテムの代わりに指定したHTMLが表示されます。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>color</code></td>
+                    <td>
+                      カラーピッカーのドロップダウンリストです。
+                      <code>.color</code>プロパティと、<code>.transparent</code>プロパティを参照してください。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap"><code>text-color</code></td>
+                    <td>
+                      テキストのカラーピッカードロップダウンリストです。テキストが選択した色になります。
+                      <code>.color</code>プロパティと、<code>.transparent</code>プロパティを参照してください。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>break</code></td>
+                    <td>縦線です。</td>
+                  </tr>
+                  <tr>
+                    <td><code>spacer</code></td>
+                    <td>
+                      水平スペーサーです。
+                      以降の全てのボタンを右寄せにします。
+                    </td>
+                  </tr>
+                </table>
+              </div><br>
+              <h2>デモ</h2>
+              <p>ツールバーの各種アイテムを表示します。</p>
+              <div id="toolbar"></div>
+              <h5>JavaScript</h5>
+              <pre><code>$(<span class="hljs-string">'#toolbar'</span>).w2toolbar({
   <span class="hljs-attr">name</span>  : <span class="hljs-string">'mytoolbar'</span>,
   <span class="hljs-attr">items</span> : [
     <span class="hljs-comment">// ボタン</span>
@@ -117,53 +337,79 @@ ga('create', 'UA-106478577-1', 'auto');</script></head><body><div id="container"
     { <span class="hljs-attr">type</span>: <span class="hljs-string">'color'</span>,  <span class="hljs-attr">id</span>: <span class="hljs-string">'color'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'color'</span> },
   ],
 });
-</code></pre><script class="load">createObj = function() {
-  $('#toolbar').w2toolbar({
-    name  : 'mytoolbar',
-    items : [
-      // ボタン
-      { type: 'button', id: 'button', text: 'button' },
-      { type: 'break' },
-      // チェックボタン
-      { type: 'check',  id: 'check1', text: 'check1' },
-      { type: 'check',  id: 'check2', text: 'check2' },
-      { type: 'break' },
-      // ラジオボタン
-      { type: 'radio',  id: 'radio1', text: 'radio1', group: 'radio' },
-      { type: 'radio',  id: 'radio2', text: 'radio2', group: 'radio' },
-      { type: 'radio',  id: 'radio3', text: 'radio3', group: 'radio' },
-      { type: 'break' },
-      // メニュー
-      { type: 'menu',  id: 'menu', text: 'menu',
-        items: [
-          { id: 'item1', text: 'item1' },
-          { id: 'item2', text: 'item2' },
-          { id: 'item3', text: 'item3', icon: 'icon-folder' },
-          { id: 'item4', text: 'item4', icon: 'icon-page' },
-          { id: 'item5', text: 'item5', disabled: true },
-        ]
-      },
-      { type: 'break' },
-      // チェックボタンメニュー
-      { type: 'menu-check',  id: 'menu-check', text: 'menu-check',
-        items: [
-          { id: 'item1', text: 'item1' },
-          { id: 'item2', text: 'item2' },
-          { id: 'item3', text: 'item3', checked: true },
-          { id: 'item4', text: 'item4', disabled: true },
-          { id: 'item5', text: 'item5', icon: 'icon-page' }, // アイコンは無効になります
-        ]
-      },
-      { type: 'break' },
-      // ドロップボックス
-      { type: 'drop', id: 'drop', text: 'drop',
-        html: '<span>HTMLを表示します。</span>'
-      },
-      { type: 'break' },
-      // カラーピッカー
-      { type: 'color',  id: 'color', text: 'color' },
-    ],
-  });
-};</script><br><div class="license"><p>&copy; <span id="w2ui_cry">2017</span>. <img src="../img/email.png">.<br> Code licensed under the<a href="https://en.wikipedia.org/wiki/MIT_License">MIT License</a>. Documentation licensed under<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p><p>このコンテンツはvitmalinaによる<a href="http://w2ui.com/web/docs/1.5/">w2ui.toolbarドキュメント</a>を翻訳/改変したものです。</p><style>.license img {
-  vertical-align: middle;
-}</style><script>document.getElementById('w2ui_cry').innerHTML = new Date().getFullYear();</script></div></div></div></div></div><footer><span> &copy; <span id="copy_year">2017</span> tobijibu</span></footer></div><noscript id="deferred-styles"><link href="../css/lazy.css" rel="stylesheet"></noscript><script src="../js/main.js" defer></script><script src="../js/jquery-2.2.4.min.js"></script><script src="../js/w2ui-1.5.rc1.min.js"></script><div id="src" hidden></div></body></html>
+</code></pre>
+              <script class="load">
+                createObj = function() {
+                  $('#toolbar').w2toolbar({
+                    name  : 'mytoolbar',
+                    items : [
+                      // ボタン
+                      { type: 'button', id: 'button', text: 'button' },
+                      { type: 'break' },
+                      // チェックボタン
+                      { type: 'check',  id: 'check1', text: 'check1' },
+                      { type: 'check',  id: 'check2', text: 'check2' },
+                      { type: 'break' },
+                      // ラジオボタン
+                      { type: 'radio',  id: 'radio1', text: 'radio1', group: 'radio' },
+                      { type: 'radio',  id: 'radio2', text: 'radio2', group: 'radio' },
+                      { type: 'radio',  id: 'radio3', text: 'radio3', group: 'radio' },
+                      { type: 'break' },
+                      // メニュー
+                      { type: 'menu',  id: 'menu', text: 'menu',
+                        items: [
+                          { id: 'item1', text: 'item1' },
+                          { id: 'item2', text: 'item2' },
+                          { id: 'item3', text: 'item3', icon: 'icon-folder' },
+                          { id: 'item4', text: 'item4', icon: 'icon-page' },
+                          { id: 'item5', text: 'item5', disabled: true },
+                        ]
+                      },
+                      { type: 'break' },
+                      // チェックボタンメニュー
+                      { type: 'menu-check',  id: 'menu-check', text: 'menu-check',
+                        items: [
+                          { id: 'item1', text: 'item1' },
+                          { id: 'item2', text: 'item2' },
+                          { id: 'item3', text: 'item3', checked: true },
+                          { id: 'item4', text: 'item4', disabled: true },
+                          { id: 'item5', text: 'item5', icon: 'icon-page' }, // アイコンは無効になります
+                        ]
+                      },
+                      { type: 'break' },
+                      // ドロップボックス
+                      { type: 'drop', id: 'drop', text: 'drop',
+                        html: '<span>HTMLを表示します。</span>'
+                      },
+                      { type: 'break' },
+                      // カラーピッカー
+                      { type: 'color',  id: 'color', text: 'color' },
+                    ],
+                  });
+                };
+              </script><br>
+              <div class="license">
+                <p>&copy; <span id="w2ui_cry">2017</span>. <img src="../img/email.png">.<br> Code licensed under the<a href="https://en.wikipedia.org/wiki/MIT_License">MIT License</a>. Documentation licensed under<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+                <p>このコンテンツはvitmalinaによる<a href="http://w2ui.com/web/docs/1.5/">w2ui.toolbarドキュメント</a>を翻訳/改変したものです。</p>
+                <style>
+                  .license img {
+                    vertical-align: middle;
+                  }
+                </style>
+                <script>document.getElementById('w2ui_cry').innerHTML = new Date().getFullYear();</script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer><span>&copy; <span id="copy_year">2017</span> tobijibu</span></footer>
+    </div>
+    <noscript id="deferred-styles">
+      <link href="../css/lazy.css" rel="stylesheet">
+    </noscript>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/jquery-2.2.4.min.js"></script>
+    <script src="../js/w2ui-1.5.rc1.min.js"></script>
+    <div id="src" hidden></div>
+  </body>
+</html>
